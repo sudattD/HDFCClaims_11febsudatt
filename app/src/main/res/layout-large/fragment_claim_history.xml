@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popup_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusableInTouchMode="true"
+                    android:padding="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_add_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:weightSum="2">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/layout_add_more"
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:weightSum="2">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/darker_gray"></View>
+
+                        <RadioGroup
+                            android:id="@+id/Group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="fill_parent"
+                                android:background="@android:color/darker_gray"></View>
+
+                            <RadioButton
+                                android:id="@+id/btnNew"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_tab"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="Breakin Remarks"
+                                android:textColor="#C43635"
+                                android:textSize="20dp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="fill_parent"
+                                android:background="@android:color/darker_gray"></View>
+
+                            <RadioButton
+                                android:id="@+id/btnExisting"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_tab"
+                                android:button="@null"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="CIMA Remarks"
+                                android:textSize="20dp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="fill_parent"
+                                android:background="@android:color/darker_gray"></View>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/darker_gray"></View>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_breakin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_breakin_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edtBreakinNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Breakin Number"
+                                android:inputType="number"
+                                android:textSize="20dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_breakin_decision"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_breakin_number">
+
+                            <EditText
+                                android:id="@+id/edtBreakinDecision"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Breakin Decision"
+                                android:inputType="text"
+                                android:textSize="20dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_approval_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_breakin_decision">
+
+                            <EditText
+                                android:id="@+id/edtBreakinApprovalDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Breakin Approval Date"
+                                android:focusableInTouchMode="false"
+                                android:inputType="text"
+                                android:textSize="20dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_remarks_breakin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_approval_date">
+
+                            <EditText
+                                android:id="@+id/edtBreakinRemarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Breakin Remarks"
+                                android:gravity="top"
+                                android:minLines="3"
+                                android:textSize="20dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_cima"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_remarks_cima"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edtCIMARemarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="CIMA Remarks"
+                                android:gravity="top"
+                                android:minLines="3"
+                                android:textSize="20dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
+
+

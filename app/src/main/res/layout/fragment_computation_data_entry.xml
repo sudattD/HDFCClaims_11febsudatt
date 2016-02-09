@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:layout_marginTop="50dp">
+
+
+    <!--<RelativeLayout
+        android:id="@+id/rlWizard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1F1F1"
+        android:elevation="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/computation_data_entry_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_view_number_red"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+
+            android:paddingRight="7dp"
+            android:text="1"
+            android:textColor="#C43635"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/data_entry_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/computation_data_entry_badge"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_toLeftOf="@+id/part_selection_badge"
+            android:text="Computation Data Entry"
+            android:textColor="#C43635"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/part_selection_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+
+            android:layout_toLeftOf="@+id/work_selection_badge"
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="2"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/work_selection_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+
+            android:layout_toLeftOf="@+id/assesment_badge"
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="3"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/assesment_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+
+            android:layout_toLeftOf="@+id/computation_summary_badge"
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="4"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/computation_summary_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+
+            android:paddingRight="7dp"
+            android:text="5"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+       >
+
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:padding="20dp">
+
+                <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_compulsary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtCompulsary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="Compulsary Excess"
+                        android:inputType="number"
+                        android:textSize="15dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_voluntary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_compulsary">
+
+                    <EditText
+                        android:id="@+id/edtVoluntary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="Voluntary Excess"
+                        android:inputType="number"
+
+                        android:textSize="15dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_salvage_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_voluntary">
+
+                    <EditText
+                        android:id="@+id/edtSalvageAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="Salvage Amount"
+                        android:inputType="number"
+                        android:textSize="15dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_workshop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_salvage_amount"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <RadioGroup
+                        android:id="@+id/workshopGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:background="@android:color/darker_gray"></View>
+
+                        <RadioButton
+                            android:id="@+id/btnWorkshopOne"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_tab"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="Workshop 1"
+                            android:textColor="#C43635"
+                            android:textSize="15dp" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:background="@android:color/darker_gray"></View>
+
+                        <RadioButton
+                            android:id="@+id/btnWorkshopTwo"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_tab"
+                            android:button="@null"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:text="Workshop 2"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="15dp" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:background="@android:color/darker_gray"></View>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/darker_gray"></View>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_dep_perc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_workshop"
+                    android:paddingTop="15dp">    
+
+                    <EditText
+                        android:id="@+id/edtdepPerc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="Depreciation Percentage"
+                        android:inputType="number"
+
+                        android:textSize="15dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_parts_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_dep_perc">
+
+                        
+
+                    <EditText
+                        android:id="@+id/edtPartsTax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="Parts tax rate"
+                        android:inputType="number"
+
+                        android:textSize="15dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_parts_tax_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_parts_tax">
+
+                        
+
+                    <EditText
+                        android:id="@+id/edtPartsTaxOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="Parts other tax"
+                        android:inputType="number"
+
+                        android:textSize="15dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_labour_tax_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_parts_tax_other">    
+
+                    <EditText
+                        android:id="@+id/edtLabourTaxOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="Labour other tax"
+                        android:inputType="number"
+
+                        android:textSize="15dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_paint_labour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_labour_tax_other"
+                    android:paddingLeft="5dp"
+                    android:text="Paint Material Breakdown"
+                    android:textSize="12dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioPaintLabor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_paint_labour"
+                    android:layout_weight="2"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:tag="Paint Material Breakdown">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/radio_driver_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Yes"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/radio_driver_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_driver_dob"
+                        android:checked="false"
+                        android:text="No"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

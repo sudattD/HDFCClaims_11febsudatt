@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="hdfc.synoverge.com.hdfc_pointofimpact.EditableCarScreen">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/leftTopRim"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight=".01"
+            android:layout_gravity="left"
+            android:src="@drawable/rim"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight=".3"
+            >
+
+            <ImageView
+                android:id="@+id/leftTopTyre"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/tyre"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
+                />
+
+            <ImageView
+                android:id="@+id/fenderLeft"
+                android:layout_width="150dp"
+                android:layout_marginLeft="-25dp"
+                android:layout_height="250dp"
+                android:src="@drawable/fender_left"
+                android:layout_weight=".5"
+                />
+
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/pillarLeft"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:src="@drawable/a_pillar_left"
+            android:layout_gravity="right"
+            />
+
+        <LinearLayout
+            android:layout_height="350dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <ImageView
+             android:id="@+id/runningBoardLeft"
+            android:layout_height="220dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/running_board_left"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/doorFrontLeft"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/door_front_left"/>
+                <ImageView
+                    android:id="@+id/doorRearLeft"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/door_rear_left"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                >
+                <ImageView
+                    android:id="@+id/leftBottomTyre"
+                    android:layout_height="90dp"
+                    android:layout_width="90dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="-1dp"
+                    android:src="@drawable/tyre"/>
+
+                <ImageView
+                    android:id="@+id/leftBottomRim"
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="-5dp"
+                    android:src="@drawable/rim"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/quarterPanelLeft"
+                android:layout_height="300dp"
+                android:layout_width="150dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="-50dp"
+                android:src="@drawable/quarter_panel_left"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

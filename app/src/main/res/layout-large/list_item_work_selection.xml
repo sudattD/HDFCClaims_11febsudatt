@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/firstLine1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/innerLine0"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/txtPartName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:text="Bumper Front"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"/>
+
+        <View
+            android:id="@+id/innerLine1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <ToggleButton
+            android:id="@+id/imgReplaceRepair"
+            style="@style/toggleButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/toggle_bg_replace_repair"
+            android:checked="false"/>
+
+        <View
+            android:id="@+id/innerLine2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <ToggleButton
+            android:id="@+id/imgFullPartialPaint"
+            style="@style/toggleButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/toggle_bg_full_partial"
+            android:checked="false" />
+
+
+        <View
+            android:id="@+id/innerLine5"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/txtPartType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="R"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/innerLine6"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+
+    </LinearLayout>
+    <View
+
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray" />
+
+
+
+</LinearLayout>

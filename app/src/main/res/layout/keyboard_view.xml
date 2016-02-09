@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custKeyboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@android:color/white"
+    android:layout_marginBottom="40dp"
+    android:visibility="gone"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="1" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="2" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="3" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="4" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="5" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="6" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edtCustomEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="0"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_below="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="7" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="8" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="9" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn0"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="0" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnPoint"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="." />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="--" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnOK"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="OK" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,240 @@
+<resources>
+    <string name="app_name">HDFC Claims</string>
+
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="passcode">Passcode</string>
+    <string name="login">LOGIN</string>
+    <string name="go">GO</string>
+    <string name="alert_ok">Ok</string>
+    <string name="alert_cancel">Cancel</string>
+
+    <string name="toast_username_required">Please enter User Name</string>
+    <string name="toast_username_invalid">Invalid User Name or Password</string>
+    <string name="toast_password_required">Please enter password</string>
+    <string name="toast_passcode_invalid">Invalid Passcode</string>
+    <string name="toast_passcode_required">Please enter Passcode</string>
+
+
+    <string name="forms_not_filled">Please complete all forms before final save.</string>
+
+
+    <string name="passcode_content">*Please enter the passcode that was set at the time of User-Registration to unlock the application.</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_passcode">PasscodeActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_landing_main_tab">C1108201632201</string>
+
+    <string name="tab_data_entry">Data Entry</string>
+    <string name="tab_computation">Computation</string>
+    <string name="tab_payments">Payments</string>
+
+    <string name="insured_details">Insured\nDetails</string>
+    <string name="policy_info">Policy &amp;\nClaims Details</string>
+    <string name="claim_history">Claim\nHistory</string>
+    <string name="dlNrc_details">DL &amp; RC\nDetails</string>
+    <string name="point_of_impact">Point\nOf Impact</string>
+    <string name="survey_details">Survey\nDetails</string>
+    <string name="document_upload">Upload\nDocuments</string>
+
+    <string name="claim_computation_data_entry">Computation\nData Entry</string>
+    <string name="computation_summary">Computation\nSummary</string>
+    <string name="claim_computation_sheet">Claim Computation\nSheet</string>
+
+    <string name="claim_info">Claim Information</string>
+    <string name="customer_details">Customer Details</string>
+
+
+    <string name="cp_loss">CP Loss</string>
+    <string name="cp_expense">CP Expense</string>
+
+    <string name="approval_query">Approval Query</string>
+    <string name="claim_stage_master">Claim Stage Master</string>
+
+    <string name="proceed">Proceed</string>
+
+
+    <string name="front">Front</string>
+    <string name="left">Left</string>
+    <string name="ws">W/S</string>
+    <string name="rear">Rear</string>
+    <string name="right">Right</string>
+    <string name="ub">U/B</string>
+    <string name="roof">Roof</string>
+    <string name="wheel">Wheel</string>
+
+
+    <string name="driving_licence">Driving Licence</string>
+    <string name="workshop_information">Workshop \n Details</string>
+
+    <string name="driver_name">Driver Name</string>
+    <string name="driver_dob">Driver DOB</string>
+    <string name="issuance_date">Issuance Date</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="driver_type">Driver Type</string>
+    <string name="licence_type">Licence Type</string>
+    <string name="licence_number">Licence Number</string>
+    <string name="chk_condition"> Was the car driven during the accident? \nIf yes, then fill the information.</string>
+    <string name="chk_condition_fir"> FIR </string>
+    <string name="workshop_name">Workshop Name</string>
+    <string name="workshop_address">Workshop Address</string>
+    <string name="repair_details">Repair Details</string>
+    <string name="invoice_date">Invoice Date</string>
+    <string name="invoice_amount">Invoice Amount(Rs.)</string>
+    <string name="invoice_number">Invoice Number</string>
+    <string name="report_date"><font size="5">Vehicle Report Date</font></string>
+    <string name="report_time"><font size="5">Vehicle Report Time</font></string>
+    <string name="report_date_time">Vehicle Report Date Time:</string>
+    <string name="fir_details">FIR Details</string>
+    <string name="fir_date">FIR Date</string>
+    <string name="police_station">Police Station</string>
+    <string name="fir_section">FIR Under Section</string>
+    <string name="vehicle_details">RC and Vehicle Details</string>
+    <string name="vehicle_owner">Vehicle Owner</string>
+    <string name="vehicle_reg_no">Vehicle Registration No.</string>
+    <string name="transfer_date">Transfer Date</string>
+    <string name="vehicle_make">Vehicle Make</string>
+    <string name="vehicle_model">Vehicle Model</string>
+    <string name="engine_number">Engine Number</string>
+    <string name="chasis_number">Chasis Number</string>
+    <string name="rto_name">RTO Name</string>
+    <string name="vehicle_color">Vehicle Color</string>
+    <string name="vehicle_color_type">Vehicle Color Type</string>
+    <string name="claim_type">Claim Type</string>
+    <string name="idemnity_bond">Idemnity Bond</string>
+    <string name="camera_selection">Select</string>
+    <string name="payee_type">Payee Type</string>
+    <string name="payee_name">Payee Name</string>
+    <string name="payee_address">Payee Address</string>
+    <string name="service_tax">Service Tax</string>
+    <string name="tds">TDS</string>
+    <string name="net_amount">Net Amount</string>
+    <string name="pay_type">Pay Type</string>
+    <string name="payment_mode">Payment Mode</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="beneficiary_address">Beneficiary Address</string>
+    <string name="beneficiary_name">Beneficiary Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="micr_code">MICR Code</string>
+    <string name="account_name">Account Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="email_id">Email ID</string>
+    <string name="prof_fees">Prof Fees</string>
+    <string name="expense">Expense</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="cheque_amount">Cheque Amount</string>
+    <string name="expense_bill_date">Expense Bill Date</string>
+    <string name="licence">Licence</string>
+    <string name="rc_book">RC Book</string>
+    <string name="invoice">Invoice</string>
+    <string name="damaged">Damaged Images</string>
+    <string name="others">Others</string>
+    <string name="issuance_rto">Issuance RTO</string>
+
+    <string-array name="panelOuterParts">
+        <item>Bumper</item>
+        <item>Fender</item>
+        <item>Door Front</item>
+        <item>Door Rear</item>
+        <item>Quater Panel</item>
+
+    </string-array>
+
+    <string-array name="glassParts">
+        <item>Tail Gate</item>
+        <item>Bonnet</item>
+        <item>Roof</item>
+        <item>A Pillar</item>
+        <item>B Pillar</item>
+
+    </string-array>
+
+    <string-array name="plasticRubberParts">
+        <item>C Pillar</item>
+        <item>Front Glass</item>
+        <item>Rear Glass</item>
+        <item>Left Door Glass</item>
+        <item>Running Board</item>
+
+    </string-array>
+
+
+    <string-array name="partNameArray">
+        <item>Bumper Front</item>
+        <item>Fender Left</item>
+        <item>Door Front</item>
+        <item>WindShield</item>
+        <item>Side Mirror Left</item>
+        <item>Side Mirror Right</item>
+        <item>Roof</item>
+        <item>Quarter Pane</item>
+        <item>Tail Gate</item>
+        <item>A Pillar</item>
+        <item>B Pillar</item>
+
+
+    </string-array>
+
+    <string-array name="metallicPartName">
+        <item>Bumper Front</item>
+        <item>Fender Left</item>
+        <item>Side Mirror Left</item>
+        <item>WindShield</item>
+
+    </string-array>
+    <string-array name="metallicAssessedName">
+        <item>5000</item>
+        <item>5000</item>
+        <item>5000</item>
+        <item>5000</item>
+
+    </string-array>
+    <string-array name="metallicBilledAmount">
+        <item>5000</item>
+        <item>5000</item>
+        <item>5000</item>
+        <item>5000</item>
+
+    </string-array>
+    <string-array name="metallicNetAmount">
+        <item>10000</item>
+        <item>10000</item>
+        <item>10000</item>
+        <item>10000</item>
+
+    </string-array>
+
+
+    <string-array name="ownerArray">
+        <item>U</item>
+        <item>S</item>
+        <item>U</item>
+        <item>S</item>
+    </string-array>
+
+
+    <string-array name="msgArray">
+        <item>If the CNG/LPG kit is manufacturer fitted or when you install one from a third party vendor you need to inform us at the time of taking the policy or before or immediately after installation of such a kit for the continuation of benefits under the policy.</item>
+        <item>You can get a duplicate policy with payment of nominal fee of Rs. 50/-. Please call our toll free number 1800 22 1111/1800 102 1111 for further assistance - or visit any of our branch office.</item>
+        <item>You can contact any of our branch offices for renewal of policy here.</item>
+        <item>You need to inform us immediately by visiting our nearest branch office or call our toll free number 1800 22 1111/1800 102 1111 for further assistance.</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_fragment_container">FragmentContainerActivity</string>
+    <string name="title_activity_calender">CalenderActivity</string>
+    <string name="title_activity_dashboard_container">DashboardContainerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+</resources>

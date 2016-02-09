@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="hdfc_red" type="color">#C43635</item>
+    <item name="hdfc_blue" type="color">#2673FF</item>
+    <item name="grey_light" type="color">#D8D8D8</item>
+    <item name="grey_dark" type="color">#989898</item>
+    <item name="grey_ultra_light" type="color">#f0f0f0</item>
+
+</resources>

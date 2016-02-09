@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popup_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusableInTouchMode="true">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_add_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="2">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/layout_voluntary"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/darker_gray"></View>
+
+                        <RadioGroup
+                            android:id="@+id/Group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="fill_parent"
+                                android:background="@android:color/darker_gray"></View>
+
+                            <RadioButton
+                                android:id="@+id/btnNew"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_tab"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="New"
+                                android:textColor="#C43635"
+                                android:textSize="15dp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="fill_parent"
+                                android:background="@android:color/darker_gray"></View>
+
+                            <RadioButton
+                                android:id="@+id/btnExisting"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_tab"
+                                android:button="@null"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="Existing"
+                                android:textSize="15dp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="fill_parent"
+                                android:background="@android:color/darker_gray"></View>
+
+                            <RadioButton
+                                android:id="@+id/btnRejected"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_tab"
+                                android:button="@null"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="Rejected"
+                                android:textSize="15dp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="fill_parent"
+                                android:background="@android:color/darker_gray"></View>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/darker_gray"></View>
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_IFSC_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout">
+
+                        <EditText
+                            android:id="@+id/edtIFSCCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:inputType="text"
+                            android:hint="IFSC Code"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_beneficiary_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_IFSC_code">
+
+                        <EditText
+                            android:id="@+id/edtBeneficiaryAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:inputType="text"
+                            android:hint="Beneficiary Address"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_beneficiary_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_beneficiary_address">
+
+                        <EditText
+                            android:id="@+id/edtBeneficiaryName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:inputType="text"
+                            android:hint="Beneficiary Name"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_beneficiary_name">
+
+                        <EditText
+                            android:id="@+id/edtPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="Phone Number"
+                            android:inputType="number"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_phone_number">
+
+                        <EditText
+                            android:id="@+id/edtMobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="Mobile Number"
+                            android:inputType="number"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_micr_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_mobile_number">
+
+                        <EditText
+                            android:id="@+id/edtMICRCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:inputType="text"
+                            android:hint="MICR Code"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_account_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_micr_code">
+
+                        <EditText
+                            android:id="@+id/edtAccountName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:inputType="text"
+                            android:hint="Account Name"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_account_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_account_name">
+
+                        <EditText
+                            android:id="@+id/edtAccountNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="Account Number"
+                            android:inputType="number"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_bank_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_account_number">
+
+                        <EditText
+                            android:id="@+id/edtBankName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:inputType="text"
+                            android:hint="Bank Name"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_branch_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_bank_name">
+
+                        <EditText
+                            android:id="@+id/edtBranchName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:inputType="text"
+                            android:hint="Branch Name"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_email_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_branch_name">
+
+                        <EditText
+                            android:id="@+id/edtEmailID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="Email ID"
+                            android:inputType="textEmailAddress"
+                            android:textSize="15dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
+
+

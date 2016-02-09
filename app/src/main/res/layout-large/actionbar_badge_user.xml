@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_gravity="end"
+    android:background="@android:color/transparent">
+
+    <!-- Menu Item Image -->
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:clickable="true"
+        android:onClick="badgeClickEvent"
+        android:layout_gravity="center"
+        android:src="@drawable/man" />
+
+    <!-- Badge Count -->
+    <TextView
+        android:id="@+id/txtActionUser"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="center"
+        android:text="9"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+
+</FrameLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="hdfc.synoverge.com.hdfc_pointofimpact.EditableCarScreen"
+    tools:showIn="@layout/activity_editable_car_screen"
+
+    >
+
+    <!--First layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            >
+
+            <include
+                layout="@layout/car_left_layout"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.34"
+            android:orientation="vertical"
+
+            >
+            <include
+                layout="@layout/car_middle_layout"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:orientation="vertical"
+            >
+            <include
+                layout="@layout/car_right_layout"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--First layout -->
+    <ImageView
+        android:id="@+id/imgOpenDrawer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-9dp"
+        android:src="@drawable/drawer_arrow_open" />
+</RelativeLayout>

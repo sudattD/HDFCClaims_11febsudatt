@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlWizard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1F1F1"
+        android:elevation="5dp"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/computation_data_entry_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="1"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/part_selection_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+
+            android:layout_toRightOf="@+id/computation_data_entry_badge"
+            android:background="@drawable/round_view_number_red"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="2"
+            android:textColor="#C43635"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/part_selection_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/part_selection_badge"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+
+            android:paddingRight="7dp"
+            android:text="Part Selection"
+            android:textColor="#C43635"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/work_selection_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+
+            android:layout_toLeftOf="@+id/assesment_badge"
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="3"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/assesment_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+
+            android:layout_toLeftOf="@+id/computation_summary_badge"
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="4"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/computation_summary_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+
+            android:background="@drawable/round_view_number_grey"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+
+            android:paddingRight="7dp"
+            android:text="5"
+            android:textColor="@color/grey_dark"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rlWizard"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/layout_workshop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:padding="10dp"
+
+            android:weightSum="2">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"></View>
+
+            <RadioGroup
+                android:id="@+id/workshopGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray"></View>
+
+                <RadioButton
+                    android:id="@+id/btnWorkshopOne"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_tab"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Workshop 1"
+                    android:textColor="#C43635"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray"></View>
+
+                <RadioButton
+                    android:id="@+id/btnWorkshopTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_tab"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="Workshop 2"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray"></View>
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"></View>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/searchLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_workshop"
+            android:orientation="horizontal"
+
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="1">
+
+
+            <android.support.design.widget.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/layout_compulsary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.85"
+                android:gravity="center">
+
+                <AutoCompleteTextView
+                    android:id="@+id/searchPartsSelectionAutoComplete"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:completionThreshold="1"
+                    android:drawableLeft="@drawable/search_black_24"
+                    android:dropDownWidth="wrap_content"
+                    android:hint="Search"
+                    android:inputType="textAutoComplete|textAutoCorrect"
+                    android:textSize="15dp"></AutoCompleteTextView>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.15"
+                android:background="@drawable/rounded_button_red"
+                android:gravity="center"
+                android:text="Close"
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvSelectedPartsBucket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchLL"
+            android:background="@android:color/darker_gray"></ListView>
+
+        <ImageView
+            android:id="@+id/empty_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchLL"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/empty_cart"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+
+        android:id="@+id/imgOpenDrawer"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-9dp"
+
+
+        android:src="@drawable/drawer_arrow_open" />
+</RelativeLayout>
+
+
+
+
+
+
+

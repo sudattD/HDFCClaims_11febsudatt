@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popup_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/chkPolicyInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hdfc_red"
+                    android:button="@drawable/checkbox_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="Policy Info"
+                    android:textColor="@android:color/white"
+                    android:textSize="17dp"
+                    android:checked="false" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/caldroid_white"></View>
+
+
+           <LinearLayout
+               android:id="@+id/policyInfo"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="20dp"
+                android:visibility="gone"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+               android:orientation="vertical"
+                >
+                <View
+
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="5dp"
+                    android:background="@color/hdfc_red"
+                    ></View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/grey_dark"></View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_weight=".5"
+                    android:textSize="14dp"
+                    android:text="Policy Number "/>
+                <TextView
+                    android:id="@+id/policyNumber"
+                    android:layout_width="0dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+
+
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:text="C230015034232"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/grey_dark"></View>
+
+
+                </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Product Name "/>
+                   <TextView
+                       android:id="@+id/productName"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="Fender"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Policy Type "/>
+                   <TextView
+                       android:id="@+id/policyType"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="Regular"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Policy Start Date "/>
+                   <TextView
+                       android:id="@+id/policyStartDate"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="08/01/2015"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Policy End Date "/>
+                   <TextView
+                       android:id="@+id/policyEndDate"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="07/01/2016"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Vehicle Make "/>
+                   <TextView
+                       android:id="@+id/vehicleMake"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="2008"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Vehicle Model "/>
+                   <TextView
+                       android:id="@+id/vehicleModel"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="GJ01RF2402"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Manufacturing Year "/>
+                   <TextView
+                       android:id="@+id/manufacturingYear"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="2009"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Final Payable without Dep. "/>
+                   <TextView
+                       android:id="@+id/finalPayable"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="60,403"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Chassis number "/>
+                   <TextView
+                       android:id="@+id/chassisNumber"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="12168776565"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Add on Plan "/>
+                   <TextView
+                       android:id="@+id/addOnPlan"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="None"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+
+
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+
+
+
+
+               <LinearLayout
+
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_margin="15dp"
+                   >
+
+                   <TextView
+                       android:id="@+id/txtMiscOthers"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Sum Insured"
+                       android:textColor="#dab066"
+                       android:textSize="15dp" />
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="10dp"
+                       android:background="#dab066" />
+               </LinearLayout>
+
+
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Basic Sum Insured "/>
+                   <TextView
+                       android:id="@+id/basicSumInsured"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="None"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Trailer "/>
+                   <TextView
+                       android:id="@+id/trailer"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="None"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Electrical Accessories"/>
+                   <TextView
+                       android:id="@+id/elecAccessories"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="None"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="Non Electrical Accessories"/>
+                   <TextView
+                       android:id="@+id/nonElecAccessories"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="None"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="1">
+
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="left"
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:layout_weight=".5"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:text="CNG/LPG Kit "/>
+                   <TextView
+                       android:id="@+id/cngLpgKit"
+                       android:layout_width="0dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:layout_marginRight="10dp"
+                       android:padding="10dp"
+                       android:textSize="14dp"
+                       android:layout_weight=".5"
+                       android:text="None"/>
+                   <View
+                       android:layout_width="1dp"
+                       android:layout_height="fill_parent"
+                       android:background="@color/grey_dark"></View>
+               </LinearLayout>
+               <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/grey_dark"></View>
+
+
+            </LinearLayout>
+
+
+
+                <CheckBox
+                    android:id="@+id/chkEndorsement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hdfc_red"
+                    android:button="@drawable/checkbox_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="Endorsement"
+                    android:textColor="@android:color/white"
+                    android:textSize="17dp"
+                    android:checked="false" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/caldroid_white"></View>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/endorsement"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <View
+
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="5dp"
+                        android:background="@color/hdfc_red"
+                        ></View>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Endorsement Date"/>
+                        <TextView
+                            android:id="@+id/endorsementDate"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="08/01/2015"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Endorsement Type"/>
+                        <TextView
+                            android:id="@+id/endorsementType"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="08/01/2015"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Endorsement Remarks"/>
+                        <TextView
+                            android:id="@+id/endorsementRemarks"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="08/01/2015"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+
+                    </LinearLayout>
+
+
+
+
+
+                <CheckBox
+                    android:id="@+id/chkClaimInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hdfc_red"
+                    android:button="@drawable/checkbox_selector"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="Claim Info"
+                    android:textColor="@android:color/white"
+                    android:textSize="17dp"
+                    android:checked="false" />
+
+
+                <LinearLayout
+                    android:id="@+id/claimInfo"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <View
+
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="5dp"
+                        android:background="@color/hdfc_red"
+                        ></View>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Notification Date"/>
+                        <TextView
+                            android:id="@+id/notificationDate"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="08/01/2015"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Loss Date"/>
+                        <TextView
+                            android:id="@+id/lossDate"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="08/01/2015"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Loss Time"/>
+                        <TextView
+                            android:id="@+id/lossTime"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="8:00 PM"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Loss Location"/>
+                        <TextView
+                            android:id="@+id/lossLocation"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="Mumbai"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Notified By"/>
+                        <TextView
+                            android:id="@+id/notifiedBy"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="Sabu"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:layout_weight=".5"
+                            android:textSize="14dp"
+                            android:text="Loss Description"/>
+                        <TextView
+                            android:id="@+id/lossDescription"
+                            android:layout_width="0dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight=".5"
+                            android:text="Description"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grey_dark"></View>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"></View>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
+
+

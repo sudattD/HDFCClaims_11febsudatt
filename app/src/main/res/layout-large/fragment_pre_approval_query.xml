@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2E2E2">
+
+        <ListView
+            android:id="@+id/queriestListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/rlSend"
+            android:layout_margin="15dp"
+            android:background="@android:color/transparent"
+            android:stackFromBottom="true"></ListView>
+
+        <RelativeLayout
+            android:id="@+id/rlSend"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white">
+
+            <EditText
+                android:id="@+id/edtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/imgSend"
+                android:layout_toStartOf="@+id/imgSend"
+                android:hint="Enter your query"
+                android:layout_centerVertical="true"
+                android:inputType="textCapSentences"
+                android:maxLines="4"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/imgSend"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/enter" />
+        </RelativeLayout>
+</RelativeLayout>

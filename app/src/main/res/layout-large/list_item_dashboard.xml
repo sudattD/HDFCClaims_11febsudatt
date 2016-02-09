@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F1F1F1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.020"
+                android:background="@android:color/holo_green_dark"></View>
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="0.38">
+
+                <ImageView
+                    android:layout_width="240dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.38"
+                    android:src="@drawable/car_img" />
+
+                <TextView
+                    android:id="@+id/txtTAT"
+                    android:layout_gravity="bottom|end"
+                    android:gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="12 Hours"
+                    android:background="#90000000"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="0.50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtClaimID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C1108201632201"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/txtCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtClaimID"
+                    android:text="K P Singh"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/txtVehicleNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCustomerName"
+                    android:layout_marginTop="15dp"
+                    android:text="GJ-1 KA 4661"
+                    android:textColor="#838383"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/txtVehicleName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtVehicleNumber"
+                    android:text="Fiat Punto-XI"
+                    android:textColor="#838383"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/txtGarageName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtVehicleName"
+                    android:text="Hari Motor Works"
+                    android:textColor="#838383"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/txtClaimStatus"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/txtGarageName"
+                    android:text="Assigned"
+                    android:textColor="#838383"
+                    android:textSize="21sp"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+
+                android:layout_weight="0.10"
+                android:background="#E9E9E9"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgCall"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/call" />
+
+                <ImageView
+                    android:id="@+id/imgSMS"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/message" />
+
+                <ImageView
+                    android:id="@+id/imgEmail"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/chat" />
+
+                <ImageView
+                    android:id="@+id/imgPreApproval"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/chat_new" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

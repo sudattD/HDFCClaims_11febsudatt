@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popup_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/lineView">
+
+                <RelativeLayout
+                    android:id="@+id/layout_add_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="#C43635"
+                        android:text="Upload"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/layout_add_more"
+                    android:background="@android:color/black"></View>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_add_more">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_category_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        tools:ignore="MissingPrefix">
+
+                        <LinearLayout
+                            android:id="@+id/layout_claim_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtClaimForm"
+                                fontPath="fonts/HelveticaNeueLTStd-Roman.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Claim Form"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgClaimFormCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgClaimFormGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgClaimFormCamera"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineClaimForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_claim_form"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutClaimForm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineClaimForm"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backClaimForm"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewClaimForm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardClaimForm"
+                                android:layout_toRightOf="@+id/backClaimForm" />
+
+                            <ImageView
+                                android:id="@+id/forwardClaimForm"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_registration_copy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutClaimForm"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtRegistrationCopy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Registration Copy"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgRegistrationCopyCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgRegistrationCopyGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgRegistrationCopyCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineRegistrationCopy"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_registration_copy"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutRegistrationCopy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineRegistrationCopy"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backRegistrationCopy"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewRegistrationCopyImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardRegistrationCopy"
+                                android:layout_toRightOf="@+id/backRegistrationCopy" />
+
+                            <ImageView
+                                android:id="@+id/forwardRegistrationCopy"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_driving_license"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutRegistrationCopy"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtDrivingLicense"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Driving License"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgDrivingLicenseCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgDrivingLicenseGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgDrivingLicenseCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineDrivingLicense"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_driving_license"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutDrivingLicense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineDrivingLicense"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backDrivingLicence"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewDrivingLicenseImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardDrivingLicense"
+                                android:layout_toRightOf="@+id/backDrivingLicence" />
+
+                            <ImageView
+                                android:id="@+id/forwardDrivingLicense"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_estimate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutDrivingLicense"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtEstimate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Estimate"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgEstimateCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgEstimateGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgEstimateCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineEstimate"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_estimate"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutEstimate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineEstimate"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backEstimate"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewEstimateImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardEstimate"
+                                android:layout_toRightOf="@+id/backEstimate" />
+
+                            <ImageView
+                                android:id="@+id/forwardEstimate"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_crash_photos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutEstimate"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtCrashPhotos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Crash Photos"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgCrashPhotosCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgCrashPhotosGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgCrashPhotosCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineCrashPhotos"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_crash_photos"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutCrashPhotos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineCrashPhotos"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backCrashPhotos"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewCrashPhotosImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardCrashPhotos"
+                                android:layout_toRightOf="@+id/backCrashPhotos" />
+
+                            <ImageView
+                                android:id="@+id/forwardCrashPhotos"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_repair_bill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutCrashPhotos"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtRepairBill"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Repair Bill"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgRepairBillCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgRepairBillGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgRepairBillCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineRepairBill"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_repair_bill"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutRepairBill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineRepairBill"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backRepairBill"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewRepairBillImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardRepairBill"
+                                android:layout_toRightOf="@+id/backRepairBill" />
+
+                            <ImageView
+                                android:id="@+id/forwardRepairBill"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_survey_fees_bill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutRepairBill"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtSurveyFeesBill"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Survey Fees Bill"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgSurveyFeesBillCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgSurveyFeesBillGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgSurveyFeesBillCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineSurveyBill"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_survey_fees_bill"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutSurveyBill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineSurveyBill"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backSurveyBill"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewSurveyImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardSurveyBill"
+                                android:layout_toRightOf="@+id/backSurveyBill" />
+
+                            <ImageView
+                                android:id="@+id/forwardSurveyBill"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_cancelled_cheque"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutSurveyBill"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtCancelledCheque"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Cancelled Cheque"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgCancelledChequeCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgCancelledChequeGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgCancelledChequeCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineCancelledCheque"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_cancelled_cheque"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutCancelledCheque"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineCancelledCheque"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backCancelledCheque"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewCancelledChequeImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardCancelledCheque"
+                                android:layout_toRightOf="@+id/backCancelledCheque" />
+
+                            <ImageView
+                                android:id="@+id/forwardCancelledCheque"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_kyc_docs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutCancelledCheque"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtKYCDoc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="KYC Documents"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgKYCDocCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgKYCDocGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgKYCDocCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineKYCDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_kyc_docs"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutKYCDoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineKYCDoc"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backKYCDoc"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewKYCDocImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardKYCDoc"
+                                android:layout_toRightOf="@+id/backKYCDoc" />
+
+                            <ImageView
+                                android:id="@+id/forwardKYCDoc"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_new_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutKYCDoc"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/txtNewCategory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="New Category"
+                                android:textColor="@android:color/black" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/ImgNewCategoryCamera"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/camera" />
+
+                                <ImageView
+                                    android:id="@+id/ImgNewCategoryGallery"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_toRightOf="@+id/ImgNewCategoryCamera"
+                                    android:foregroundGravity="center_vertical"
+                                    android:src="@drawable/gallery" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/lineNewCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/layout_new_category"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutNewCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lineNewCategory"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/backNewCategory"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/left_arrow_scroll"
+                                android:visibility="gone" />
+
+                            <com.devsmart.android.ui.HorizontalListView
+                                android:id="@+id/listViewNewCategoryImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/forwardNewCategory"
+                                android:layout_toRightOf="@+id/backNewCategory" />
+
+                            <ImageView
+                                android:id="@+id/forwardNewCategory"
+                                android:layout_width="10dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow_scroll"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutNewCategory"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                                android:id="@+id/spinner_others"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:gravity="left|center_vertical"
+                                android:hint="Others"
+                                android:textColor="@android:color/black"
+                                app:met_floatingLabel="normal" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+</RelativeLayout>
+
+

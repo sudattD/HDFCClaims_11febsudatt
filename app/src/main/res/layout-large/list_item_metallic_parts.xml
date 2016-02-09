@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+
+    android:orientation="horizontal"
+    android:visibility="visible"
+
+    >
+
+    <View
+
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvPartName"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="2.0"
+
+        android:text="Bumper Front"
+        android:textColor="@android:color/black"
+        android:textSize="12dp" />
+
+    <View
+
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/edtAssessedName"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:gravity="left"
+        android:inputType="number"
+        android:text="5000"
+        android:textColor="@android:color/black"
+        android:textSize="12dp"
+        android:singleLine="true"/>
+
+    <View
+
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/edtBilledAmount"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:gravity="left"
+        android:inputType="number"
+
+        android:text="5000"
+        android:textColor="@android:color/black"
+        android:textSize="12dp"
+        android:singleLine="true"
+
+
+        />
+
+    <View
+
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/edtNetAmount"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:gravity="left"
+        android:inputType="number"
+        android:text="10000"
+        android:textColor="@android:color/black"
+        android:textSize="12dp"
+        android:singleLine="true"/>
+
+    <View
+
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/darker_gray" />
+
+
+</LinearLayout>

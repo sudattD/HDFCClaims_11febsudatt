@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/allPartsDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:elevation="5dp">
+
+    <FrameLayout
+        android:id="@+id/outerFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ademar.phasedseekbar.PhasedSeekBar
+            android:id="@+id/psb_star"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+
+            android:layout_gravity="top|center_horizontal"
+
+            app:phased_anchor_height="50dp"
+            app:phased_anchor_width="50dp"
+
+
+            app:phased_item_height="70dp"
+            app:phased_item_width="70dp"
+            app:phased_mode="horizontal" />
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+        <include layout="@layout/bottom_layout" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/llRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:gravity="start">
+
+        <ImageView
+            android:id="@+id/imgCloseDrawer"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-9dp"
+            android:src="@drawable/drawer_arrow_close" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"></View>
+
+                    <CheckBox
+                        android:id="@+id/checkboxPanelOuterParts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="@color/hdfc_red"
+                        android:button="@drawable/checkbox_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Panels &amp; Outer Parts"
+                        android:textColor="@android:color/white"
+                        android:textSize="17dp" />
+
+                    <com.hdfc.claims.Widgets.ExpandedListView
+                        android:id="@+id/lvPanelOuterParts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"></View>
+
+                    <CheckBox
+                        android:id="@+id/checkboxGlassParts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="@color/hdfc_red"
+                        android:button="@drawable/checkbox_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Glass Parts"
+                        android:textColor="@android:color/white"
+                        android:textSize="17dp" />
+
+                    <com.hdfc.claims.Widgets.ExpandedListView
+                        android:id="@+id/lvGlassParts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@android:color/transparent"
+
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"></View>
+
+                    <CheckBox
+                        android:id="@+id/checkboxPlasticRubberParts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="@color/hdfc_red"
+                        android:button="@drawable/checkbox_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Plastic / Rubber Parts"
+                        android:textColor="@android:color/white"
+                        android:textSize="17dp" />
+
+                    <com.hdfc.claims.Widgets.ExpandedListView
+                        android:id="@+id/lvPlasticRubberParts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

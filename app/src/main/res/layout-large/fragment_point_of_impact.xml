@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="40dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/car_topview" />
+
+    <ImageView
+        android:id="@+id/openbtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/maximize"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="Front"
+        android:textSize="20dp"
+        android:textColor="@color/hdfc_red" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:paddingTop="20dp"
+        android:text="Left"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/hdfc_red" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:textSize="20dp"
+        android:text="Rear"
+        android:textColor="@color/hdfc_red" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end|center"
+        android:layout_centerVertical="true"
+        android:paddingTop="20dp"
+        android:text="Right"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/hdfc_red" />
+</RelativeLayout>

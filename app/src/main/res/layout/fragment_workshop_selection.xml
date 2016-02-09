@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popup_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <RadioGroup
+                        android:id="@+id/workshopGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:background="@android:color/darker_gray"></View>
+
+                        <RadioButton
+                            android:id="@+id/btnWorkshopOne"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_tab"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="Workshop 1"
+                            android:textColor="#C43635"
+                            android:textSize="15dp" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:background="@android:color/darker_gray"></View>
+
+                        <RadioButton
+                            android:id="@+id/btnWorkshopTwo"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_tab"
+                            android:button="@null"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:text="Workshop 2"
+                            android:textSize="15dp"
+                            android:visibility="gone"/>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/hdfc_red"
+                            android:background="@android:color/white"
+                            android:layout_weight="1"
+                            android:text="Add Workshop"/>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:background="@android:color/darker_gray"></View>
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/darker_gray"></View>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusableInTouchMode="true"
+                        android:padding="15dp">
+
+                        <TextView android:id="@+id/txtSurveyLocation"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingLeft="4dp"
+                            android:textSize="12dp"
+                            android:layout_below="@+id/layout_driver_dob"
+                            android:text="Survey Location"/>
+
+                        <RadioGroup
+                            android:id="@+id/radioSurveyLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="start"
+                            android:tag="Gender"
+                            android:layout_below="@+id/txtSurveyLocation"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/radio_driver_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="Workshop"
+                                android:textColor="@android:color/black"
+                                android:textSize="15dp" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/radio_driver_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_driver_dob"
+                                android:checked="false"
+                                android:text="Residence"
+                                android:textColor="@android:color/black"
+                                android:textSize="15dp" />
+
+                        </RadioGroup>
+
+                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                            android:id="@+id/spinner_workshop_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Workshop Name"
+                            android:textColorHint="@android:color/black"
+                            android:layout_below="@+id/radioSurveyLocation"
+                            android:textSize="15dp"
+                            app:met_floatingLabel="normal" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_workshop_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spinner_workshop_name">
+
+                            <EditText
+                                android:id="@+id/edtWorkshopAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Workshop Address"
+                                android:text="Car Pluss, \nOpp. Iscon Bridge, \nSatellite, Ahmedabad"
+                                android:textSize="15dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_dtm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_workshop_address"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/layout_report_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <EditText
+                                    android:id="@+id/edtReportDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="@string/report_date"
+                                    android:textSize="15dp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/layout_report_time"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+                                <EditText
+                                    android:id="@+id/edtReportTime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:hint="@string/report_time"
+                                    android:textSize="15dp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout_time_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_dtm"
+                            android:visibility="gone">
+
+                            <TimePicker
+                                android:id="@+id/timePicker1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:timePickerMode="spinner"
+                                android:layout_marginBottom="24dp" />
+
+                            <Button
+                                android:id="@+id/btnSetTime"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_below="@+id/timePicker1"
+                                android:background="@color/hdfc_red"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:text="Set"
+                                android:textColor="@android:color/white"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_invoice_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_time_picker">
+
+                            <EditText
+                                android:id="@+id/edtInvoiceNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Invoice Number"
+                                android:inputType="number"
+                                android:textSize="15dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_invoice_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_invoice_number">
+
+                            <EditText
+                                android:id="@+id/edtInvoiceDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:focusableInTouchMode="false"
+                                android:hint="Invoice Date"
+                                android:textSize="15dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_invoice_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_invoice_date">
+
+                            <EditText
+                                android:id="@+id/edtInvoiceAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Invoice Amount"
+                                android:inputType="number"
+                                android:textSize="15dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_repair_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_invoice_amount">
+
+                            <EditText
+                                android:id="@+id/edtRepairDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:hint="Repair Details"
+                                android:gravity="top"
+                                android:minLines="3"
+                                android:textSize="15dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
+
+
